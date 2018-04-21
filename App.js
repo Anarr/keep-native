@@ -8,11 +8,13 @@ import Profile from './components/Profile';
 
 class App extends React.Component {
 
+  // Navigation options
   static navigationOptions =
   {
      title: 'App'
   };
 
+  // declare default state
   state = {
     user_info:{
       "firstname":"",
@@ -22,6 +24,7 @@ class App extends React.Component {
     pass:""
   }
 
+  // get user info
   getUserInfo = () => {
     let apiUrl = "http://api.onbranch.com/v2/user/241";
     return fetch(apiUrl)
@@ -37,14 +40,14 @@ class App extends React.Component {
     });
   }
 
-
+  // function after successfully login
   OpenSecondActivityFunction = (data) =>
   {
      this.props.navigation.navigate('Second',data);
   }
 
   render() {    
-    // this.getUserinfo();
+
     const firstname = this.state.user_info.firstname, lastname = this.state.user_info.lastname;
     let email,pass;
 

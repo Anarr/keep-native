@@ -19,11 +19,15 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expo": "^25.0.0",
     "native-base": "^2.4.2",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-linear-gradient": "^2.4.0",
-    "react-navigation": "^1.5.11"
+    "react-navigation": "^1.5.11",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-axios-middleware": "^4.0.0"
   }
 }
